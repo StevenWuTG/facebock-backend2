@@ -1,6 +1,6 @@
 class WallSerializer < ActiveModel::Serializer
   attributes :id
 
-  has_many :users
-  has_many :posts
+  has_one :user
+  # has_many :posts
 end

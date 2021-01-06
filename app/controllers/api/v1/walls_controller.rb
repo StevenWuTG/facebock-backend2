@@ -1,7 +1,9 @@
 class Api::V1::WallsController < ApplicationController
+    skip_before_action :authorized
+
     def index
         allWalls = Wall.all
-        render json: allWalls, except: [:created_at, :updated_at]
+        render json: allWalls
     end
 
     def create
@@ -37,6 +39,6 @@ class Api::V1::WallsController < ApplicationController
     private
 
     def wall_params
-        params.permit(:user)
+        params.require(:wall).permit(:user)
     end
 end

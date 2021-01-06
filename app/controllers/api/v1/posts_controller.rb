@@ -1,5 +1,5 @@
 class Api::V1::PostsController < ApplicationController
-    skip_before_action :authorized, only: [:create, :index]
+    skip_before_action :authorized
 
     def index
         posts = Post.all
@@ -39,7 +39,7 @@ class Api::V1::PostsController < ApplicationController
     private
 
     def post_params
-        params.permit(:content,:img_url,:wall)
+        params.require(:post).permit(:content,:img_url,:wall_id)
     end
 end
 
