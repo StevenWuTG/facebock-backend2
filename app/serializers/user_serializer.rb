@@ -3,4 +3,7 @@ class UserSerializer < ActiveModel::Serializer
 
   has_one :wall
   has_many :posts, through: :wall
+  
+  has_many :friendships
+  has_many :friends, through: :friendships, class_name: "User"
 end
