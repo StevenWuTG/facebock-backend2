@@ -4,3 +4,4 @@ class UserSerializer < ActiveModel::Serializer
   has_one :wall
   has_many :posts, through: :wall
 end
+  

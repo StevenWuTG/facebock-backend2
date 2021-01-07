@@ -20,7 +20,7 @@ stevenwall = Wall.create!(user: steven)
 
 puts "seeding Posts"
 
-post1 = Post.create!(content:"wasssupppp", img_url:"random", wall: stevenwall)
+post1 = Post.create!(content:"wasssupppp", img_url:"https://publicrawartistsorg.s3.amazonaws.com/images/comprofiler/crop_141188_avatar_1373406227.jpg", wall: stevenwall)
 
 
 
