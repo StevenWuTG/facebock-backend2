@@ -13,6 +13,7 @@ Wall.destroy_all
 puts "seeding Users"
 
 steven = User.create!(username: "steven", password:"123", first_name:"Steven", last_name: "Wu",avatar: "https://pm1.narvii.com/6636/ddaf1c402f3767d7c934aac8520aa12c023fd31c_00.jpg")
+victor = User.create!(username: "victor", password:"12", first_name:"Victor", last_name: "Torres",avatar: "https://pm1.narvii.com/6636/ddaf1c402f3767d7c934aac8520aa12c023fd31c_00.jpg")
 
 puts "seeding Wall"
 
