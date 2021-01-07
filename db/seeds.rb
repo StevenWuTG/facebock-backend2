@@ -18,10 +18,13 @@ victor = User.create!(username: "victor", password:"12", first_name:"Victor", la
 puts "seeding Wall"
 
 stevenwall = Wall.create!(user: steven)
+victorwall = Wall.create!(user: victor)
 
 puts "seeding Posts"
 
 post1 = Post.create!(content:"wasssupppp", img_url:"https://publicrawartistsorg.s3.amazonaws.com/images/comprofiler/crop_141188_avatar_1373406227.jpg", wall: stevenwall)
+post2 = Post.create!(content:"Booooooom" ,img_url:"https://static.wikia.nocookie.net/rickandmorty/images/6/6c/MeeseeksHQ.png/revision/latest/top-crop/width/360/height/450?cb=20150930232412",wall: victorwall)
+
 
 
 
